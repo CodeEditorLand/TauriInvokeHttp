@@ -28,7 +28,7 @@
 		"tauri": "tauri"
 	},
 	"dependencies": {
-		"@tauri-apps/cli": "^1.5.2"
+		"@tauri-apps/cli": "1.5.12"
 	},
 	"devDependencies": {
 		"@playform/build": "0.0.7",
