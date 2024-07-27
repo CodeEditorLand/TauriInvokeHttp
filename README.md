@@ -1,7 +1,8 @@
 # Tauri Invoke HTTP
 
-This is a crate that provides a custom invoke system for Tauri using a localhost server.
-Each message is delivered through a `XMLHttpRequest` and the server is responsible for replying to it.
+This is a crate that provides a custom invoke system for Tauri using a localhost
+server. Each message is delivered through a `XMLHttpRequest` and the server is
+responsible for replying to it.
 
 ## Usage
 
@@ -33,13 +34,13 @@ fn main() {
 }
 ```
 
-To invoke a custom command from your own or remote system you can use `curl` or similar tooling.
-See [`examples/vanilla`](examples/vanilla/) to test this on your system.
+To invoke a custom command from your own or remote system you can use `curl` or
+similar tooling. See [`examples/vanilla`](examples/vanilla/) to test this on
+your system.
 
-An example command to invoke the `exit` command in the example Tauri app exposing port `18436` (randomly chosen port) could look like:
+An example command to invoke the `exit` command in the example Tauri app
+exposing port `18436` (randomly chosen port) could look like:
 
 ```sh
 curl localhost:18436/main -H 'Content-Type: application/json' -d '{ "__tauriModule": "Process", "cmd": "exit", "callback": 1234, "error": 1234, "message": {"cmd": "exit", "exitCode": 1  } }'
 ```
-
-
