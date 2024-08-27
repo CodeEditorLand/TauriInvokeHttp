@@ -4,7 +4,7 @@ This is a crate that provides a custom invoke system for Tauri using a localhost
 server. Each message is delivered through a `XMLHttpRequest` and the server is
 responsible for replying to it.
 
-## Usage
+## 🛠️ Usage
 
 First, add the dependency to your `src-tauri/Cargo.toml` file:
 
