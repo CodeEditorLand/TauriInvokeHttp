@@ -1,17 +1,1 @@
-{
-<<<<<<< HEAD
-	"name": "app",
-=======
-	"dependencies": {
-		"@tauri-apps/cli": "2.0.0-rc.16"
-	},
->>>>>>> c99c38b5569ce1ddccd72890c860fdd9608a4fa9
-	"description": "",
-	"main": "index.js",
-	"scripts": {
-		"tauri": "tauri"
-	},
-	"dependencies": {
-		"@tauri-apps/cli": "1.5.2"
-	}
-}
+
