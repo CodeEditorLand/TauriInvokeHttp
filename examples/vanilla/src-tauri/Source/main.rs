@@ -1,14 +1,15 @@
 #![cfg_attr(all(not(debug_assertions), target_os = "windows"), windows_subsystem = "windows")]
 
 #[tauri::command]
-fn my_command(args: u64) -> Result<String, ()> {
+fn my_command(args:u64) -> Result<String, ()> {
 	println!("executed command with args {:?}", args);
 	Ok("executed".into())
 }
 
 fn main() {
 	// Allow from all origins for testing purposes.
-	// Should be allow listed to reduce risks of accidential exposure to other networks.
+	// Should be allow listed to reduce risks of accidential exposure to other
+	// networks.
 	let http = tauri_invoke_http::Invoke::new(["*"]);
 	tauri::Builder::default()
 		.invoke_system(http.initialization_script(), http.responder())
