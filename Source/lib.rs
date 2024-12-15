@@ -9,13 +9,13 @@ use std::{
 };
 
 use tauri::{
-	api::ipc::CallbackFn,
 	AppHandle,
 	InvokePayload,
 	InvokeResponder,
 	InvokeResponse,
 	Manager,
 	Runtime,
+	api::ipc::CallbackFn,
 };
 use tiny_http::{Header, Method, Request, Response};
 
@@ -155,12 +155,12 @@ impl Invoke {
               \
 			 try {{
                 arg = JSON.parse(this.response)}} catch (e) {{
-                \
-			 arg = e
+                arg \
+			 = e
                 success = false
               }}
-              window[`_${{success \
-			 ? message.callback : message.error}}`](arg)}})
+              window[`_${{success ? \
+			 message.callback : message.error}}`](arg)}})
             request.open('POST', 'http://localhost:{}/' \
 			 + window.__TAURI_METADATA__.__currentWindow.label, true)
             request.setRequestHeader('Content-Type', 'application/json')
